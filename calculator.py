@@ -1,11 +1,11 @@
-a = 10
-b = 20
-
-sum = a + b
-diff = a-b
-mul = a*b
-
-print(f'The sum is {sum}')
-print(f'The diff is {diff}')
-print(f"The Mul is {mul}")
-
+#input two numbers from user
+number_1 = int(input("Enter the first number:"))
+number_2 = int(input("Enter the second number:"))
+#add two numbers
+print('{} + {} = {}'.format(number_1, number_2, number_1 + number_2))
+#subtract two numbers
+print('{} - {} = {}'.format(number_1, number_2, number_1 - number_2))
+#multiply two numbers
+print('{} * {} = {}'.format(number_1, number_2, number_1 * number_2))
+#divide two numbers
+print('{} / {} = {}'.format(number_1, number_2, number_1 / number_2))
