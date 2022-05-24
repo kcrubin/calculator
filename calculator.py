@@ -1,3 +1,7 @@
+def welcome():
+    print('''
+    ***************Welcome to my calculator*******************
+    ''')
 def calculate():
     operation = input('''
     Please enter the type of operation you want to perform:
@@ -25,20 +29,22 @@ def calculate():
         print('{} / {} = {}'.format(number_1, number_2, number_1 / number_2))
     else:
         print('You have entered the invalid operator. Please try again.')
-
-    # call calculation function 
-calculate()
+    again()
 
 def again():
     cal_again = input(''' Do you want to calculate again ?
     Press Y for Yes and N for No.''')
 
     # if user presses Y
-    if cal_again == 'Y' or 'y':
+    if cal_again.upper() == 'Y':
         calculate()
     # if user presses N
-    elif cal_again == 'N' or 'n':
+    elif cal_again.upper() == 'N':
         print('Goodbye')
     # if user presses any other key
     else:
         again()
+
+welcome()
+    # call calculation function 
+calculate()
