@@ -33,10 +33,9 @@ def calculate():
             print('{} / {} = {}'.format(number_1, number_2, number_1 / number_2))
         except ZeroDivisionError:
             print('Divide by zero not allowed')
-            again()
     else:
         print('You have entered the invalid operator. Please try again.')
-    
+    again()
 
 def again():
     cal_again = input(''' Do you want to calculate again ?
