@@ -1,3 +1,6 @@
+from decimal import DivisionByZero
+
+
 def welcome():
     print('''
     ***************Welcome to my calculator*******************
@@ -25,11 +28,15 @@ def calculate():
         #multiply two numbers
         print('{} * {} = {}'.format(number_1, number_2, number_1 * number_2))
     elif operation == '/':
+        try:
         #divide two numbers
-        print('{} / {} = {}'.format(number_1, number_2, number_1 / number_2))
+            print('{} / {} = {}'.format(number_1, number_2, number_1 / number_2))
+        except ZeroDivisionError:
+            print('Divide by zero not allowed')
+            again()
     else:
         print('You have entered the invalid operator. Please try again.')
-    again()
+    
 
 def again():
     cal_again = input(''' Do you want to calculate again ?
