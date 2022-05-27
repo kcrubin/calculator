@@ -1,6 +1,7 @@
 from tkinter import *
 
 root = Tk()
+root.title("Simple Calculator")
 #creating a label widget
 myLabel = Label(root, text="Hello world")
 #shoving it onto the screen
